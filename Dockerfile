@@ -1,8 +1,7 @@
-FROM ubuntu:14.04
-MAINTAINER Zaiste <oh [at] zaiste.net>
+FROM fnubhupen/oraclejava:7
+MAINTAINER Bhupendra Kumar <Bhupendra.kumar@softcrylic.com>
 
 RUN apt-get update \
-  && apt-get -q -y install wget git openjdk-7-jre-headless \
   && echo "deb http://pkg.jenkins-ci.org/debian binary/" > /etc/apt/sources.list.d/jenkins.list \
   && wget -q -O - http://pkg.jenkins-ci.org/debian/jenkins-ci.org.key | apt-key add - \
   && apt-get update \
