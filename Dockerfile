@@ -10,7 +10,7 @@ RUN apt-get update \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/
 
-VOLUME /var/lib/jenkins
+#VOLUME /var/lib/jenkins
 ENV JENKINS_HOME /var/lib/jenkins
 
 EXPOSE 8080
