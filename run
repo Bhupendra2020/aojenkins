@@ -8,7 +8,6 @@ DATA=/var/lib/jenkins
 mkdir -p $DATA/plugins
 
 if find $DATA/plugins -maxdepth 0 -empty | read v; then
-    (cd $DATA/plugins && wget --no-check-certificate $PLUGINS_ENDPOINT/hipchat.hpi)
     (cd $DATA/plugins && wget --no-check-certificate $PLUGINS_ENDPOINT/greenballs.hpi)
     (cd $DATA/plugins && wget --no-check-certificate $PLUGINS_ENDPOINT/credentials.hpi)
     (cd $DATA/plugins && wget --no-check-certificate $PLUGINS_ENDPOINT/ssh-credentials.hpi)
